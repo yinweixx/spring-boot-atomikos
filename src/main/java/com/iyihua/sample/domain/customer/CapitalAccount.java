@@ -22,6 +22,15 @@ public class CapitalAccount {
 	@Column(name = "balance_amount", nullable = false)
     private BigDecimal balanceAmount;
 
+    @Override
+    public String toString() {
+        return "CapitalAccount{" +
+                "id=" + id +
+                ", userId=" + userId +
+                ", balanceAmount=" + balanceAmount +
+                '}';
+    }
+
     public long getUserId() {
         return userId;
     }

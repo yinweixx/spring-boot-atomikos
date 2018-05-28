@@ -56,10 +56,13 @@ public class StoreServiceImpl implements StoreService {
 	@Transactional()
 	public void transfer() {
 		CapitalAccount ca1 = capitalAccountRepository.findOne(1l);
+		System.out.println(ca1.toString());
 		CapitalAccount ca2 = capitalAccountRepository.findOne(2l);
 		RedPacketAccount rp1 = redPacketAccountRepository.findOne(1l);
 		RedPacketAccount rp2 = redPacketAccountRepository.findOne(2l);
 		BigDecimal capital = BigDecimal.TEN;
+		System.out.println("-------------------------");
+		System.out.println(capital);
 		BigDecimal red = BigDecimal.TEN;
 		ca1.transferFrom(capital);
 		ca2.transferTo(capital);
